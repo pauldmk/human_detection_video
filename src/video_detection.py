@@ -1,10 +1,11 @@
 import os
+from pathlib import Path
 from imageai.Detection import VideoObjectDetection
 from prepare_files import download_video, download_object_detection_models
 
 
 def annotate_humans(
-    input_file_path: str,
+    input_file_path: Path,
     minimum_percentage_probability: int = 60,
     model_filename: str = "resnet50_coco_best_v2.1.0.h5",
 ):
@@ -27,6 +28,8 @@ def annotate_humans(
     detector.setModelPath(os.path.join("data", model_filename))
     detector.loadModel()
 
+    input_file_path = str(input_file_path.absolute()) # str required by imageai
+
     # perform detection on each frame of the video
     video_path = detector.detectObjectsFromVideo(
         input_file_path=input_file_path,
@@ -46,7 +49,7 @@ if __name__ == "__main__":
     download_object_detection_models()
 
     # download video
-    video_file_path = os.path.join("data", "miss_dior.mp4")
+    video_file_path = Path("data") / "miss_dior.mp4"
     download_video(video_file_path, resolution="1080p")
 
     # annotate video
