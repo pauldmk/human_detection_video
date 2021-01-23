@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 There are two options available to get started:
-1. Recommended: use Anaconda 3 and follow the [Installing with conda](#installing-with-conda)
+1. Recommended: use Anaconda 3 and follow [Installing with conda](#installing-with-conda)
 2. Alternatively, install Python 3.7.6 and pip in a virtual environment and follow [Installing with pip](#installing-with-pip)
 
 In both cases, installation instructions must be performed at the root of a local copy of this repository:
