@@ -1,8 +1,7 @@
-import os
+import urllib
 from pathlib import Path
 
 from pytube import YouTube
-import urllib
 
 
 def download_object_detection_models(

@@ -1,6 +1,7 @@
-import os
 from pathlib import Path
+
 from imageai.Detection import VideoObjectDetection
+
 from prepare_files import download_video, download_object_detection_models
 
 
@@ -22,22 +23,22 @@ def annotate_humans(
 
     # indicate detection parameters in the output file name
     output_file_name = f"annotated_video_{minimum_percentage_probability}_{model_filename.split('.')[0]}"
-    output_file_path = os.path.join("output", output_file_name + ".avi")
+    output_file_path = Path("output") / (output_file_name + ".avi")
 
     detector = VideoObjectDetection()
     detector.setModelTypeAsRetinaNet()  # change this method if using alternate models (e.g. YOLO)
-    detector.setModelPath(os.path.join("data", model_filename))
+    detector.setModelPath(Path("data") / model_filename)
     detector.loadModel()
 
     input_file_path = str(input_file_path.absolute())  # str required by imageai
 
     # perform detection on each frame of the video
     video_path = detector.detectObjectsFromVideo(
-        input_file_path=input_file_path,
+        input_file_path=str(input_file_path),
         custom_objects=detector.CustomObjects(
             person=True  # we're only interested in detecting humans
         ),
-        output_file_path=os.path.join("output", output_file_name),
+        output_file_path=str(Path("output") / output_file_name),
         frames_per_second=25,  # same fps as input video
         frame_detection_interval=1,
         log_progress=True,
