@@ -16,7 +16,7 @@ There are two options available to get started:
 
 In both cases, installation instructions must be performed at the root of a local copy of this repository:
 ```
-git clone <this_repo_url>
+git clone https://github.com/pauldmk/human_detection_video.git
 cd human_detection_video
 ```
 
