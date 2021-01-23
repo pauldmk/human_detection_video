@@ -14,9 +14,10 @@ def annotate_humans(
     indicating the location of detected persons.
     Annotated video saved in /output folder.
 
-    :param input_file_path: path of input video to annotate
-    :param minimum_percentage_probability: detection threshold probability (in %), model specific, defaults to 50
-    :param model_filename: name of pretrained model (backbone) stored in /data folder, defaults to "resnet50_coco_best_v2.1.0.h5"
+    Args:
+        input_file_path (Path): Path of input video to annotate
+        minimum_percentage_probability (int, optional): Detection threshold probability (in %), model specific. Defaults to 60.
+        model_filename (str, optional): Name of pretrained model (backbone) stored in /data folder. Defaults to "resnet50_coco_best_v2.1.0.h5".
     """
 
     # indicate detection parameters in the output file name
@@ -28,7 +29,7 @@ def annotate_humans(
     detector.setModelPath(os.path.join("data", model_filename))
     detector.loadModel()
 
-    input_file_path = str(input_file_path.absolute()) # str required by imageai
+    input_file_path = str(input_file_path.absolute())  # str required by imageai
 
     # perform detection on each frame of the video
     video_path = detector.detectObjectsFromVideo(
