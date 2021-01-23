@@ -49,8 +49,10 @@ if __name__ == "__main__":
     download_object_detection_models()
 
     # download video
-    video_file_path = Path("data") / "miss_dior.mp4"
-    download_video(video_file_path, resolution="1080p")
+    resolution = "1080p"
+    filename = f"miss_dior_{resolution}.mp4"
+    video_file_path = Path("data") / filename
+    download_video(video_file_path, resolution=resolution)
 
     # annotate video
     annotate_humans(video_file_path, minimum_percentage_probability=60)

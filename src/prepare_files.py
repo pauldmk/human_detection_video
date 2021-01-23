@@ -11,15 +11,13 @@ def download_object_detection_models():
     """
 
     # download backbone of RetinaNet model (ResNet50):
-    urllib.request.urlretrieve(
-        "https://github.com/OlafenwaMoses/ImageAI/releases/download/essentials-v5/resnet50_coco_best_v2.1.0.h5",
-        os.path.join("data", "resnet50_coco_best_v2.1.0.h5"),
-    )
-    # # yolo didn't prove to give nearly as good results as RetinaNet:
-    # urllib.request.urlretrieve(
-    #     "https://github.com/OlafenwaMoses/ImageAI/releases/download/1.0/yolo.h5",
-    #     os.path.join("data", "yolo.h5"),
-    # )
+    target_path = Path("data") / "resnet50_coco_best_v2.1.0.h5"
+    if not target_path.exists():
+        print("Downloading pretrained model backbone...")
+        urllib.request.urlretrieve(
+            "https://github.com/OlafenwaMoses/ImageAI/releases/download/essentials-v5/resnet50_coco_best_v2.1.0.h5",
+            target_path,
+        )
 
 
 def download_video(
@@ -35,7 +33,9 @@ def download_video(
     :param resolution: resolution of the video to download (must be available on Youtube), defaults to "720p"
     """
 
-    folder = video_file_path.parents[0]
-    YouTube(video_url).streams.filter(res=resolution).first().download(
-        folder, filename=video_file_path.stem
-    )
+    if not video_file_path.exists():
+        print("Downloading video...")
+        folder = video_file_path.parents[0]
+        YouTube(video_url).streams.filter(res=resolution).first().download(
+            folder, filename=video_file_path.stem
+        )
