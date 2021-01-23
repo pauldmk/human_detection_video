@@ -11,8 +11,7 @@ def annotate_humans(
     model_filename: str = "resnet50_coco_best_v2.1.0.h5",
 ):
     """
-    Make use of imageai.Detection to annotate an input video with bounding boxes
-    indicating the location of detected persons.
+    Make use of imageai.Detection to annotate an input video with bounding boxes indicating the location of detected persons.
     Annotated video saved in /output folder.
 
     Args:
@@ -22,7 +21,7 @@ def annotate_humans(
     """
 
     # indicate detection parameters in the output file name
-    output_file_name = f"annotated_video_{minimum_percentage_probability}_{model_filename.split('.')[0]}"
+    output_file_name = f"{input_file_path.stem}_{minimum_percentage_probability}%_{model_filename.split('.')[0]}"
     output_file_path = Path("output") / (output_file_name + ".avi")
 
     detector = VideoObjectDetection()
