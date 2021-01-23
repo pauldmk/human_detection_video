@@ -1,0 +1,6 @@
+name: video_detection_aive
+dependencies:
+  - python==3.7.6
+  - pip
+  - pip:
+    - -r file:requirements.txt

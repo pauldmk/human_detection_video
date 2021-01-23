@@ -1,0 +1,4 @@
+tensorflow-gpu==2.4.0
+keras==2.4.3
+imageai==2.1.6
+pytube==10.4.1
