@@ -22,7 +22,7 @@ cd human_detection_video
 
 ### Installing with conda
 
-Create a GPU enabled environment with all requirements:
+Create an environment with all requirements:
 ```
 conda env create -f requirements.yml
 ```
@@ -33,7 +33,7 @@ conda activate video_detection_aive
 
 ### Installing with pip
 
-Activate the previously created virtual environment and install requirements (enabling GPU) using pip:
+Activate the previously created virtual environment and install requirements using pip:
 ```
 pip install -r requirements.txt
 ```
@@ -48,11 +48,11 @@ python src/video_detection.py
 It follows the following steps:
 1. Download pre-trained Deep Learning model backbone
 2. Download local copy of video
-3. Perform object detection using GPU, if available
+3. Perform object detection, using GPU if machine has a CUDA enabled GPU available (otherwise will run on CPU)
 
 ## Results
 
-RetinaNet and a ResNet50 backbone are found to perform best, and perform annotation in about an hour on a single basic CPU. 
+RetinaNet and a ResNet50 backbone are found to perform best, and perform annotation in about an hour on a basic CPU. 
 
 Several detection threshold were attempted. A threshold of 60% gives visually satisfying results, but it is highly dependent on the use case. Besides, even with this manually tuned threshold, some frames feature false positives. On the upside, the annotation is overall of great quality, and even performs better than my human eye on some frames (e.g. at 0:17 with a blurred person in the background).
 
