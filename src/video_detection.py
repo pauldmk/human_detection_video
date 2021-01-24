@@ -17,7 +17,7 @@ def annotate_humans(
     Args:
         input_file_path (Path): Path of input video to annotate
         minimum_percentage_probability (int, optional): Detection threshold probability (in %), model specific. Defaults to 60.
-        model_filename (str, optional): Name of pretrained model (backbone) stored in /data folder. Defaults to "resnet50_coco_best_v2.1.0.h5".
+        model_filename (str, optional): Name of pretrained model stored in /data folder. Defaults to "resnet50_coco_best_v2.1.0.h5".
     """
 
     # indicate detection parameters in the output file name
