@@ -24,7 +24,7 @@ cd human_detection_video
 
 Create an environment with all requirements:
 ```
-conda env create -f requirements.yml
+conda env create -f requirement.yml
 ```
 Activate this environment:
 ```
