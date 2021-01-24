@@ -2,7 +2,7 @@
 
 The objective of the project is to show human presence in a given Youtube video (e.g. the [Dior - Eau de Parfum](https://www.youtube.com/watch?v=h4s0llOpKrU) commercial) by drawing bounding boxes around them on each frame.
 
-The retained solution uses the [ImageAI](https://github.com/OlafenwaMoses/ImageAI) library and more specifically its [video detection](https://github.com/OlafenwaMoses/ImageAI#videodetection) class. This library enables quick usage of several pre-trained Deep Learning models for object detection such as ResNet (used as backbone of RetinaNet) which is found to perform best for this task (especially better than YOLOv3 and its lightweight variant tiny-YOLOv3). Note that such pre-trained models are released by ImageAI at https://github.com/OlafenwaMoses/ImageAI/releases.
+The retained solution uses the [ImageAI](https://github.com/OlafenwaMoses/ImageAI) library and more specifically its [video detection](https://github.com/OlafenwaMoses/ImageAI#videodetection) class. This library enables quick usage of several pre-trained Deep Learning models for object detection such as ResNet (used as backbone for RetinaNet) which is found to perform best for this task (especially better than YOLOv3 and its lightweight variant tiny-YOLOv3). Note that such pre-trained models are released by ImageAI at https://github.com/OlafenwaMoses/ImageAI/releases.
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 There are two options available to get started:
-1. Recommended: use Anaconda 3 and follow [Installing with conda](#installing-with-conda)
+1. Recommended: use [Anaconda 3](https://www.anaconda.com/products/individual#Downloads) and follow [Installing with conda](#installing-with-conda)
 2. Alternatively, install Python 3.7.6 and pip in a virtual environment and follow [Installing with pip](#installing-with-pip)
 
 In both cases, installation instructions must be performed at the root of a local copy of this repository:
