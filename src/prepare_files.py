@@ -15,10 +15,9 @@ def download_object_detection_models(
         Defaults to "https://github.com/OlafenwaMoses/ImageAI/releases/download/essentials-v5/resnet50_coco_best_v2.1.0.h5".
     """
 
-    # download backbone of RetinaNet model (ResNet50):
     target_path = Path("data") / url.split("/")[-1]
     if not target_path.exists():
-        print("Downloading pretrained model backbone...")
+        print("Downloading pretrained model...")
         urllib.request.urlretrieve(
             url,
             target_path,
