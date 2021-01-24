@@ -2,7 +2,7 @@
 
 The objective of the project is to show human presence in a given Youtube video (e.g. the [Dior - Eau de Parfum](https://www.youtube.com/watch?v=h4s0llOpKrU) commercial) by drawing bounding boxes around them on each frame.
 
-The retained solution uses the [ImageAI](https://github.com/OlafenwaMoses/ImageAI) library and more specifically its [video detection](https://github.com/OlafenwaMoses/ImageAI#videodetection) class. This library enables quick usage of several pre-trained Deep Learning models for object detection such as ResNet (used as backbone for RetinaNet) which is found to perform best for this task (especially better than YOLOv3 and its lightweight variant tiny-YOLOv3). Note that such pre-trained models are released by ImageAI at https://github.com/OlafenwaMoses/ImageAI/releases.
+The retained solution uses the [ImageAI](https://github.com/OlafenwaMoses/ImageAI) library and more specifically its [video detection](https://github.com/OlafenwaMoses/ImageAI#videodetection) class. This library enables quick usage of several pre-trained Deep Learning models for object detection such as RetinaNet which is found to perform best for this task (especially better than YOLOv3 and its lightweight variant tiny-YOLOv3). Note that such pre-trained models are released by ImageAI at https://github.com/OlafenwaMoses/ImageAI/releases.
 
 ## Getting Started
 
