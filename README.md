@@ -48,7 +48,7 @@ python src/video_detection.py
 It performs the following steps:
 1. Download pre-trained Deep Learning model backbone
 2. Download local copy of video
-3. Perform object detection, using GPU if machine has a CUDA enabled GPU available (otherwise will run on CPU)
+3. Perform object detection, using GPU if machine has a CUDA enabled GPU available (otherwise it will run on CPU)
 
 ## Results
 
