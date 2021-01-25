@@ -54,7 +54,7 @@ It performs the following steps:
 
 RetinaNet and a ResNet50 backbone are found to perform best, and perform annotation in about an hour on a basic CPU. 
 
-Several detection threshold were attempted. A threshold of 60% gives visually satisfying results, but it is highly dependent on the use case. Besides, even with this manually tuned threshold, some frames feature false positives. On the upside, the annotation is overall of great quality, and even performs better than my human eye on some frames (e.g. at 0:17 with a blurred person in the background).
+Several detection threshold were attempted. A threshold of 60% gives visually satisfying results, but it is highly dependent on the use case. Besides, even with this manually tuned threshold, some frames feature false positives, as well as false negatives under challenging conditions (unusual human posture, hidden body parts, distant shot) which would be caught using a lower detection threshold. On the upside, the annotation is overall of great quality, and even performs better than my human eye on some frames (e.g. at 0:17 with a blurred person in the background).
 
 ## Built with
 
